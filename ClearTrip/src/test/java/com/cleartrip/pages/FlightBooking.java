@@ -34,7 +34,9 @@ public class FlightBooking {
 	private final By LOC_DD_ADULTS = By.xpath(".//h4[text()='Adults']/parent::div//select");
 	private final By LOC_WL_FROM_SUGGESTIONS = By.xpath(".//h4[text()='From']/parent::div//div[text()='Suggestions']/parent::ul//p");
 	private final By LOC_WL_TO_SUGGESTIONS = By.xpath(".//h4[text()='To']/parent::div//div[text()='Suggestions']/parent::ul//p");
-
+	private final By LOC_BT_SEARCH_FLIGHTS = By.xpath(".//button[text()='Search flights']");
+	private final By LOC_BT_BOOK_BUTTON = By.xpath(".//button[text()='book']");
+	
 	public FlightBooking(SeleniumSEPTest test) {
 
 		driver = test.getDriver();
@@ -135,5 +137,13 @@ public class FlightBooking {
 		}
 	}
 
+	public void clickSearchFlights() {
+		ClickUtils.clickButtonOrFail(test, LOC_BT_SEARCH_FLIGHTS, "Unable to click on the search flights button");
+		WaitUtils.waitForElementPresent(test, LOC_BT_BOOK_BUTTON, 15, "Book button is not displayed");
+	}
+
+	public void clickBookButton() {
+		ClickUtils.clickButtonOrFail(test, LOC_BT_BOOK_BUTTON, "Unable to click on book button");
+	}
 
 }

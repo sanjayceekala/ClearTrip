@@ -1,6 +1,7 @@
 package com.cleartrip.tests;
 
 import java.util.Date;
+import java.util.Set;
 
 import org.testng.annotations.Test;
 
@@ -25,6 +26,18 @@ public class Regression_001_BookRoundTrip extends SeleniumSEPTest{
 		FlightBooking flightBooking = new FlightBooking(this);
 		flightBooking.selectTripType(tripType.ROUND_TRIP);
 		flightBooking.fillRoundTripDetails("BLR", "DEL", dates, 1);
+		
+		flightBooking.clickSearchFlights();
+
+		String parentWindow = driver.getWindowHandle();
+
+		flightBooking.clickBookButton();
+		Set<String> windows = driver.getWindowHandles();
+		for(String window : windows) {
+			if(!window.equalsIgnoreCase(parentWindow)) {
+				driver.switchTo().window(window);
+			}
+		}
 
 	}
 
