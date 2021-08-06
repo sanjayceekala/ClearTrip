@@ -43,11 +43,11 @@ public class Regression_001_BookRoundTrip extends SeleniumSEPTest{
 		
 		ReviewItinerary reviewItinerary = new ReviewItinerary(this);
 		reviewItinerary.selectFares("Standard fare");
-		reviewItinerary.clickContinueButton();
+		reviewItinerary.clickContinueButtonItinerary();
 		reviewItinerary.clickStepThisStepButton();
 		reviewItinerary.enterMobileNumber("8197696308");
-		reviewItinerary.clickContinueButton();
-		reviewItinerary.fillTravellerDetails("Sanjay", "Ceekala", "Male");
+		reviewItinerary.clickContinueButtonContact();
+		reviewItinerary.fillTravellerDetails("Sanjay", "Ceekala","Indian", "Male");
 		reviewItinerary.clickContinueToPaymentButton();
 
 		new Payment(this);

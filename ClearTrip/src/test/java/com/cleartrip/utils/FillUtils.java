@@ -36,6 +36,7 @@ public class FillUtils {
 		ReportManager reportManager = test.getReportManager();
 		
 		if(element != null) {
+			element.clear();
 			element.sendKeys(text);
 			reportManager.reportPassed("Fill text box", "Successfully filled the text in the text box");
 		}

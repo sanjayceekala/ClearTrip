@@ -35,7 +35,7 @@ public class FlightBooking {
 	private final By LOC_WL_FROM_SUGGESTIONS = By.xpath(".//h4[text()='From']/parent::div//div[text()='Suggestions']/parent::ul//p");
 	private final By LOC_WL_TO_SUGGESTIONS = By.xpath(".//h4[text()='To']/parent::div//div[text()='Suggestions']/parent::ul//p");
 	private final By LOC_BT_SEARCH_FLIGHTS = By.xpath(".//button[text()='Search flights']");
-	private final By LOC_BT_BOOK_BUTTON = By.xpath(".//button[text()='book']");
+	private final By LOC_BT_BOOK_BUTTON = By.xpath(".//button[text()='Book']");
 	
 	public FlightBooking(SeleniumSEPTest test) {
 
@@ -140,12 +140,12 @@ public class FlightBooking {
 	}
 
 	public void clickSearchFlights() {
-		WaitUtils.waitForElementVisible(test, LOC_BT_SEARCH_FLIGHTS, 15, "Search Flights button is not visible");
+		WaitUtils.waitForElementVisible(test, LOC_BT_SEARCH_FLIGHTS, 5, "Search Flights button is not visible");
 		ClickUtils.clickButtonOrFail(test, LOC_BT_SEARCH_FLIGHTS, "Unable to click on the search flights button");
+		WaitUtils.waitForElementPresent(test, LOC_BT_BOOK_BUTTON, 15, "Book button not present");
 	}
 
 	public void clickBookButton() {
-		WaitUtils.waitForElementPresent(test, LOC_BT_BOOK_BUTTON, 5, "Book button not present");
 		ClickUtils.clickButtonOrFail(test, LOC_BT_BOOK_BUTTON, "Unable to click on book button");
 	}
 

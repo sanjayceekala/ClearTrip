@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Aug 06 15:30:26 IST 2021</td>
+<td>Started on:</td><td>Fri Aug 06 16:46:27 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>6 seconds (6797 ms)</td>
+<tr><td>Total time:</td><td>479 seconds (479127 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,25 +76,9 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.cleartrip.tests.Regression_001_BookRoundTrip.tearDown()'><b>tearDown</b><br>Test class: com.cleartrip.tests.Regression_001_BookRoundTrip</td>
-<td><div><pre>org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;SCEEKALPF28RTJ2&apos;, ip: &apos;192.168.29.108&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.1&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210721174149, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 9940, moz:profile: C:\Users\sceekala\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 20495c4e-c866-41f4-b15e-5fa0bc7e47d8
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:452)
-	at com.cleartrip.common.SeleniumSEPTest.tearDown(SeleniumSEPTest.java:95)
+<td><div><pre>java.lang.AssertionError: Test Failed : One or more steps failed
+	at org.testng.Assert.fail(Assert.java:99)
+	at com.cleartrip.common.SeleniumSEPTest.tearDown(SeleniumSEPTest.java:101)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -119,26 +103,10 @@ Session ID: 20495c4e-c866-41f4-b15e-5fa0bc7e47d8
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1174737066", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1174737066'><pre>org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;SCEEKALPF28RTJ2&apos;, ip: &apos;192.168.29.108&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.1&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210721174149, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 9940, moz:profile: C:\Users\sceekala\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 20495c4e-c866-41f4-b15e-5fa0bc7e47d8
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:452)
-	at com.cleartrip.common.SeleniumSEPTest.tearDown(SeleniumSEPTest.java:95)
+</pre></div><a href='#' onClick='toggleBox("stack-trace903716563", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace903716563'><pre>java.lang.AssertionError: Test Failed : One or more steps failed
+	at org.testng.Assert.fail(Assert.java:99)
+	at com.cleartrip.common.SeleniumSEPTest.tearDown(SeleniumSEPTest.java:101)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -164,8 +132,8 @@ Session ID: 20495c4e-c866-41f4-b15e-5fa0bc7e47d8
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>0</td>
-<td>com.cleartrip.tests.Regression_001_BookRoundTrip@1b822fcc</td></tr>
+<td>8</td>
+<td>com.cleartrip.tests.Regression_001_BookRoundTrip@3b4ef7</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
@@ -175,34 +143,59 @@ Session ID: 20495c4e-c866-41f4-b15e-5fa0bc7e47d8
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.cleartrip.tests.Regression_001_BookRoundTrip.NRE_001_BookRoundTrip_test()'><b>NRE_001_BookRoundTrip_test</b><br>Test class: com.cleartrip.tests.Regression_001_BookRoundTrip</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: Failed to decode response from marionette
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;SCEEKALPF28RTJ2&apos;, ip: &apos;192.168.29.108&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.1&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210721174149, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 9940, moz:profile: C:\Users\sceekala\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 20495c4e-c866-41f4-b15e-5fa0bc7e47d8
-*** Element info: {Using=xpath, value=.//p[text()=&apos;Your trips&apos;]}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at com.cleartrip.utils.WaitUtils.waitForElementPresent(WaitUtils.java:32)
-	at com.cleartrip.pages.TopPanel.&lt;init&gt;(TopPanel.java:31)
-	at com.cleartrip.tests.Regression_001_BookRoundTrip.NRE_001_BookRoundTrip_test(Regression_001_BookRoundTrip.java:21)
+<td title='com.cleartrip.tests.Regression_001_BookRoundTrip.NRE_001_BookRoundTrip_test()'><b>NRE_001_BookRoundTrip_test</b><br>Test class: com.cleartrip.tests.Regression_001_BookRoundTrip<br/>
+<a href="#Output-1186657657" onClick='toggleBox("Output-1186657657", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1186657657" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1186657657">
+Element is present in the webpage<br/>
+Top Panel is displayed<br/>
+Clicked on the webelement successfully<br/>
+Element is visible in the webpage<br/>
+Clicked on the webelement successfully<br/>
+Element is visible in the webpage<br/>
+Successfully filled the text in the text box<br/>
+Successfully filled the text in the text box<br/>
+Clicked on the webelement successfully<br/>
+Element is present in the webpage<br/>
+Element is visible in the webpage<br/>
+Flight Booking page is displayed<br/>
+Clicked on the webelement successfully<br/>
+Successfully filled the text in the text box<br/>
+Element is visible in the webpage<br/>
+Clicked on the webelement successfully<br/>
+Successfully filled the text in the text box<br/>
+Element is visible in the webpage<br/>
+Clicked on the webelement successfully<br/>
+Clicked on the webelement successfully<br/>
+Element is visible in the webpage<br/>
+Clicked on the webelement successfully<br/>
+Clicked on the webelement successfully<br/>
+Successfully selected the text in the dropdown<br/>
+Element is visible in the webpage<br/>
+Clicked on the webelement successfully<br/>
+Element is present in the webpage<br/>
+Clicked on the webelement successfully<br/>
+Element is present in the webpage<br/>
+Review Itinerary page is displayed<br/>
+Clicked on the webelement successfully<br/>
+Clicked on the webelement successfully<br/>
+Element is visible in the webpage<br/>
+Clicked on the webelement successfully<br/>
+Element is visible in the webpage<br/>
+Successfully filled the text in the text box<br/>
+Unable to click on Continue Button<br/>
+Element is visible in the webpage<br/>
+Successfully filled the text in the text box<br/>
+Successfully filled the text in the text box<br/>
+Clicked on the webelement successfully<br/>
+The Webelements are not returned : By.xpath: .//div[text()='Gender']/ancestor:button/parent::div//ul/li<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.cleartrip.pages.ReviewItinerary.selectGender(ReviewItinerary.java:100)
+	at com.cleartrip.pages.ReviewItinerary.fillTravellerDetails(ReviewItinerary.java:86)
+	at com.cleartrip.tests.Regression_001_BookRoundTrip.NRE_001_BookRoundTrip_test(Regression_001_BookRoundTrip.java:50)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -231,34 +224,11 @@ Session ID: 20495c4e-c866-41f4-b15e-5fa0bc7e47d8
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1844700236", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1844700236'><pre>org.openqa.selenium.WebDriverException: Failed to decode response from marionette
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;SCEEKALPF28RTJ2&apos;, ip: &apos;192.168.29.108&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.1&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210721174149, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 9940, moz:profile: C:\Users\sceekala\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 20495c4e-c866-41f4-b15e-5fa0bc7e47d8
-*** Element info: {Using=xpath, value=.//p[text()=&apos;Your trips&apos;]}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at com.cleartrip.utils.WaitUtils.waitForElementPresent(WaitUtils.java:32)
-	at com.cleartrip.pages.TopPanel.&lt;init&gt;(TopPanel.java:31)
-	at com.cleartrip.tests.Regression_001_BookRoundTrip.NRE_001_BookRoundTrip_test(Regression_001_BookRoundTrip.java:21)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1186657657", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1186657657'><pre>java.lang.NullPointerException
+	at com.cleartrip.pages.ReviewItinerary.selectGender(ReviewItinerary.java:100)
+	at com.cleartrip.pages.ReviewItinerary.fillTravellerDetails(ReviewItinerary.java:86)
+	at com.cleartrip.tests.Regression_001_BookRoundTrip.NRE_001_BookRoundTrip_test(Regression_001_BookRoundTrip.java:50)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -288,8 +258,8 @@ Session ID: 20495c4e-c866-41f4-b15e-5fa0bc7e47d8
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>5</td>
-<td>com.cleartrip.tests.Regression_001_BookRoundTrip@1b822fcc</td></tr>
+<td>463</td>
+<td>com.cleartrip.tests.Regression_001_BookRoundTrip@3b4ef7</td></tr>
 </table><p>
 </body>
 </html>

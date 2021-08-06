@@ -22,14 +22,17 @@ public class ReviewItinerary {
 	ReportManager reportManager;
 	
 	private By LOC_WL_REVIEW_ITINERARY_HEADER = By.xpath(".//h2[text()='Review your itinerary']");
-	private By LOC_RB_FARE_TYPES = By.cssSelector("data-testid*=fareCard");
-	private By LOC_BT_CONTINUE_BUTTON = By.xpath(".//h2[text()='Continue']");
-	private By LOC_BT_SKIP_THIS_STEP_BUTTON = By.xpath(".//h2[text()='Skip this step']");
-	private By LOC_IN_MOBILE_NUMBER = By.cssSelector("data-testid=mobileNumber");
+	private By LOC_RB_FARE_TYPES = By.cssSelector("[data-testid*=fareCard]");
+	private By LOC_BT_CONTINUE_BUTTON_ITINERARY_DETAILS = By.xpath(".//*[text()='Continue']");
+	private By LOC_BT_CONTINUE_BUTTON_CONTACT_DETAILS = By.xpath(".//*[text()='Email address']/ancestor::div//*[text()='Continue']");
+	private By LOC_BT_SKIP_THIS_STEP_BUTTON = By.xpath(".//*[text()='Skip this step']");
+	private By LOC_IN_MOBILE_NUMBER = By.cssSelector("[data-testid=mobileNumber]");
 	private By LOC_IN_FIRSTNAME = By.cssSelector("[placeholder='First name']");
 	private By LOC_IN_LASTNAME = By.cssSelector("[placeholder='Last name']");
+	private By LOC_IN_NATIONALITY = By.cssSelector("[placeholder='Nationality']");
+	private By LOC_IN_NATIONALITY_SUGGESTION =  By.xpath(".//*[@placeholder='Nationality']/ancestor::div//li");
 	private By LOC_WL_GENDER = By.xpath(".//div[text()='Gender']");
-	private By LOC_WL_GENDER_OPTIONS = By.xpath(".//div[text()='Gender']/ancestor:button//ul/li");
+	private By LOC_WL_GENDER_OPTIONS = By.xpath(".//div[text()='Gender']/ancestor::div//ul/li");
 	private By LOC_BT_CONTINUE_TO_PAYMENT = By.xpath(".//button[text()='Continue to payment']");
 
 	public ReviewItinerary(SeleniumSEPTest test) {
@@ -54,6 +57,7 @@ public class ReviewItinerary {
 			if(typeText != null) {
 				if(typeText.getText().equalsIgnoreCase(fareType)) {
 					ClickUtils.clickButtonOrFail(test, type.findElement(By.cssSelector("circle")), "Unable to select the fare");
+					break;
 				}
 			}
 			else {
@@ -62,8 +66,12 @@ public class ReviewItinerary {
 		}
 	}
 
-	public void clickContinueButton() {
-		ClickUtils.clickButtonOrFail(test, LOC_BT_CONTINUE_BUTTON, "Unable to click on Continue Button");
+	public void clickContinueButtonItinerary() {
+		ClickUtils.clickButtonOrFail(test, LOC_BT_CONTINUE_BUTTON_ITINERARY_DETAILS, "Unable to click on Continue Button in the itinerary details section");
+	}
+	
+	public void clickContinueButtonContact() {
+		ClickUtils.clickButtonOrFail(test, LOC_BT_CONTINUE_BUTTON_CONTACT_DETAILS, "Unable to click on Continue Button in the contact details section");
 	}
 
 	public void clickStepThisStepButton() {
@@ -76,11 +84,16 @@ public class ReviewItinerary {
 		FillUtils.fillInputOrFail(test, LOC_IN_MOBILE_NUMBER, mobileNo, "Unable to fill the mobile no");
 	}
 
-	public void fillTravellerDetails(String firstName, String lastName, String gender) {
+	public void fillTravellerDetails(String firstName, String lastName, String nationality, String gender) {
 		WaitUtils.waitForElementVisible(test, LOC_IN_FIRSTNAME, 5, "Firstname field is not displayed");
 		FillUtils.fillInputOrFail(test, LOC_IN_FIRSTNAME, firstName, "Unable to fill the firstname");
 		FillUtils.fillInputOrFail(test, LOC_IN_LASTNAME, lastName, "Unable to fill the lastname");
+		
 		selectGender(gender);
+		
+		FillUtils.fillInputOrFail(test, LOC_IN_NATIONALITY, nationality, "Unable to fill the lastname");
+		WaitUtils.waitForElementVisible(test, LOC_IN_NATIONALITY_SUGGESTION, 2, "The Nationality suggestion is not displayed");
+		ClickUtils.clickButtonOrFail(test, LOC_IN_NATIONALITY_SUGGESTION, "Unable to click on the naationality in the suggestion box");
 	}
 
 	public void clickContinueToPaymentButton() {
@@ -93,6 +106,7 @@ public class ReviewItinerary {
 		for(WebElement option : gOptions) {
 			if(option.getText().equalsIgnoreCase(gender)) {
 				ClickUtils.clickButtonOrFail(test, option, "unable to click on the gender option : " + gender);
+				break;
 			}
 		}
 	}
