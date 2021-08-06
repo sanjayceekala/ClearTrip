@@ -43,7 +43,7 @@ public class ReviewItinerary {
 			reportManager.reportPassed("Review Itinerary Booking Page", "Review Itinerary page is displayed");
 		}
 		else {
-			reportManager.fail("Review Itinerary page is displayed");
+			reportManager.fail("Review Itinerary page is not displayed");
 		}
 	}
 

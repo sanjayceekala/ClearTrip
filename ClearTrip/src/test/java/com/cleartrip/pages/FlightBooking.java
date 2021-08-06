@@ -74,7 +74,7 @@ public class FlightBooking {
 		ClickUtils.clickButtonOrFail(test, By.xpath(LOC_RB_TRIP_TYPE.format(type)), "Unable to click on the trip type radio button");
 	}
 
-	public void fillRoundTripDetails(String fromCity, String toCity, Date[] dates, int noOfAdults) {
+	public void fillRoundTripDetails(String fromCity, String toCity, Date[] dates, String noOfAdults) {
 		fillFromCity(fromCity);
 		fillToCity(toCity);
 		selectDatesRoundTrip(dates);
@@ -83,11 +83,13 @@ public class FlightBooking {
 
 	public void fillFromCity(String fromCity) {
 		FillUtils.fillInputOrFail(test, LOC_IN_FROM_FLIGHT_SEARCH, fromCity, "Unable to fill the from city");
+		WaitUtils.waitForElementVisible(test, LOC_WL_FROM_SUGGESTIONS, 2, "From Suggestions not displayed");
 		ClickUtils.clickButtonOrFail(test, LOC_WL_FROM_SUGGESTIONS, "Unable to click on the from city suggestions");
 	}
 
 	public void fillToCity(String toCity) {
 		FillUtils.fillInputOrFail(test, LOC_IN_TO_FLIGHT_SEARCH, toCity, "Unable to fill the to city");
+		WaitUtils.waitForElementVisible(test, LOC_WL_TO_SUGGESTIONS, 2, "To Suggestions not displayed");
 		ClickUtils.clickButtonOrFail(test, LOC_WL_TO_SUGGESTIONS, "Unable to click on the to city suggestions");
 	}
 
@@ -102,8 +104,8 @@ public class FlightBooking {
 		}
 	}
 
-	public void fillNoOfAdults(int noOfAdults) {
-		FillUtils.fillSelectByIndex(test, LOC_DD_ADULTS, 1, "Unable to select the adults");
+	public void fillNoOfAdults(String noOfAdults) {
+		FillUtils.fillSelectByVisibleText(test, LOC_DD_ADULTS, noOfAdults, "Unable to select the adults");
 	}
 
 	public void selectDate(Date date) {
@@ -138,11 +140,12 @@ public class FlightBooking {
 	}
 
 	public void clickSearchFlights() {
+		WaitUtils.waitForElementVisible(test, LOC_BT_SEARCH_FLIGHTS, 15, "Search Flights button is not visible");
 		ClickUtils.clickButtonOrFail(test, LOC_BT_SEARCH_FLIGHTS, "Unable to click on the search flights button");
-		WaitUtils.waitForElementPresent(test, LOC_BT_BOOK_BUTTON, 15, "Book button is not displayed");
 	}
 
 	public void clickBookButton() {
+		WaitUtils.waitForElementPresent(test, LOC_BT_BOOK_BUTTON, 5, "Book button not present");
 		ClickUtils.clickButtonOrFail(test, LOC_BT_BOOK_BUTTON, "Unable to click on book button");
 	}
 

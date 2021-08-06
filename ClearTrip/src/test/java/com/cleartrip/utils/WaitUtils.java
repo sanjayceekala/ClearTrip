@@ -1,6 +1,7 @@
 package com.cleartrip.utils;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -27,15 +28,22 @@ public class WaitUtils {
 
 		WebDriverWait wait = new WebDriverWait(driver, timeOut, 10);
 
-		WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-		if(element != null) {
-			reportManager.reportPassed("Element", "Element is present in the webpage");
-			return true;
+		try {
+			WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+			if(element != null) {
+				reportManager.reportPassed("Element", "Element is present in the webpage");
+				return true;
+			}
+			else {
+				reportManager.reportFailed("Element", failureMessage);
+				return false;
+			}
 		}
-		else {
-			reportManager.reportFailed("Element", failureMessage);
+		catch (TimeoutException e) {
+			reportManager.reportFailed("Element", "Time out : Element not present");
 			return false;
 		}
+		
 	}
 	
 	/**
@@ -52,14 +60,20 @@ public class WaitUtils {
 		WebDriver driver = test.getDriver();
 		ReportManager reportManager = test.getReportManager();
 
-		WebDriverWait wait = new WebDriverWait(driver, timeOut);
-		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-		if(element != null) {
-			reportManager.reportPassed("Element", "Element is visible in the webpage");
-			return true;
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, timeOut);
+			WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+			if(element != null) {
+				reportManager.reportPassed("Element", "Element is visible in the webpage");
+				return true;
+			}
+			else {
+				reportManager.reportFailed("Element", failureMessage);
+				return false;
+			}
 		}
-		else {
-			reportManager.reportFailed("Element", failureMessage);
+		catch (TimeoutException e) {
+			reportManager.reportFailed("Element", "Time out : Element not visible");
 			return false;
 		}
 

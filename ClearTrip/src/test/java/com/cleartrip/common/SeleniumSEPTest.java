@@ -2,6 +2,7 @@ package com.cleartrip.common;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -54,11 +55,11 @@ public class SeleniumSEPTest {
 	}
 
 	public void intializeDriver() {
-		System.setProperty("webdriver.chrome.driver", "./src/test/resources/drivers/chromedriver.exe");
-		driver = new ChromeDriver();
+//		System.setProperty("webdriver.chrome.driver", "./src/test/resources/drivers/chromedriver.exe");
+//		driver = new ChromeDriver();
 
-		//		System.setProperty("webdriver.gecko.driver", "./src/test/resources/drivers/geckodriver.exe");
-		//		driver = new FirefoxDriver();
+				System.setProperty("webdriver.gecko.driver", "./src/test/resources/drivers/geckodriver.exe");
+				driver = new FirefoxDriver();
 	}
 
 	public WebDriver getDriver() {

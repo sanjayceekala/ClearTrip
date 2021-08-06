@@ -16,7 +16,7 @@ import com.cleartrip.utils.DateUtils;
 public class Regression_001_BookRoundTrip extends SeleniumSEPTest{
 
 	@Test
-	public void NRE_001_BookRoundTrip_test() throws InterruptedException{
+	public void NRE_001_BookRoundTrip_test() {
 
 		TopPanel homePage = new TopPanel(this);
 		homePage.actionSignIn();
@@ -27,7 +27,7 @@ public class Regression_001_BookRoundTrip extends SeleniumSEPTest{
 		
 		FlightBooking flightBooking = new FlightBooking(this);
 		flightBooking.selectTripType(tripType.ROUND_TRIP);
-		flightBooking.fillRoundTripDetails("BLR", "DEL", dates, 1);
+		flightBooking.fillRoundTripDetails("BLR", "DEL", dates, "1");
 		
 		flightBooking.clickSearchFlights();
 
