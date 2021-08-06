@@ -24,7 +24,7 @@ public class Payment {
 
 		reportManager = test.getReportManager();
 		
-		if(WaitUtils.waitForElementPresent(test, LOC_WL_PAYMENT_PAGE_HEADER, 10, "Flight search page is not present")) {
+		if(WaitUtils.waitForElementPresent(test, LOC_WL_PAYMENT_PAGE_HEADER, 30, "Flight search page is not present")) {
 			reportManager.reportPassed("Payment Page", "Payment page is displayed");
 		}
 		else {

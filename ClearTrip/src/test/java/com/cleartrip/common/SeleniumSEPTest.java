@@ -55,11 +55,11 @@ public class SeleniumSEPTest {
 	}
 
 	public void intializeDriver() {
-//		System.setProperty("webdriver.chrome.driver", "./src/test/resources/drivers/chromedriver.exe");
-//		driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "./src/test/resources/drivers/chromedriver.exe");
+		driver = new ChromeDriver();
 
-				System.setProperty("webdriver.gecko.driver", "./src/test/resources/drivers/geckodriver.exe");
-				driver = new FirefoxDriver();
+		//				System.setProperty("webdriver.gecko.driver", "./src/test/resources/drivers/geckodriver.exe");
+		//				driver = new FirefoxDriver();
 	}
 
 	public WebDriver getDriver() {

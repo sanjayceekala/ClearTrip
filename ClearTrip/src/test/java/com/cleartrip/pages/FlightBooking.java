@@ -71,6 +71,7 @@ public class FlightBooking {
 	public void selectTripType(tripType tripType) {
 
 		Object[] type = {tripType.getTripType()};
+		WaitUtils.waitForElementVisible(test, By.xpath(LOC_RB_TRIP_TYPE.format(type)), 5, "Round trip radio button is not visible");
 		ClickUtils.clickButtonOrFail(test, By.xpath(LOC_RB_TRIP_TYPE.format(type)), "Unable to click on the trip type radio button");
 	}
 

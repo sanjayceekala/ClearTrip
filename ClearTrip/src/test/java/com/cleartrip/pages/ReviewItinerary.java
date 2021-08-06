@@ -24,16 +24,17 @@ public class ReviewItinerary {
 	private By LOC_WL_REVIEW_ITINERARY_HEADER = By.xpath(".//h2[text()='Review your itinerary']");
 	private By LOC_RB_FARE_TYPES = By.cssSelector("[data-testid*=fareCard]");
 	private By LOC_BT_CONTINUE_BUTTON_ITINERARY_DETAILS = By.xpath(".//*[text()='Continue']");
-	private By LOC_BT_CONTINUE_BUTTON_CONTACT_DETAILS = By.xpath(".//*[text()='Email address']/ancestor::div//*[text()='Continue']");
+	private By LOC_BT_CONTINUE_BUTTON_CONTACT_DETAILS = By.xpath(".//*[text()='Email address']/parent::div/parent::div//*[text()='Continue']");
 	private By LOC_BT_SKIP_THIS_STEP_BUTTON = By.xpath(".//*[text()='Skip this step']");
 	private By LOC_IN_MOBILE_NUMBER = By.cssSelector("[data-testid=mobileNumber]");
 	private By LOC_IN_FIRSTNAME = By.cssSelector("[placeholder='First name']");
 	private By LOC_IN_LASTNAME = By.cssSelector("[placeholder='Last name']");
-	private By LOC_IN_NATIONALITY = By.cssSelector("[placeholder='Nationality']");
-	private By LOC_IN_NATIONALITY_SUGGESTION =  By.xpath(".//*[@placeholder='Nationality']/ancestor::div//li");
+	private By LOC_IN_NATIONALITY = By.cssSelector("[placeholder*=Nationality]");
+	private By LOC_IN_NATIONALITY_SUGGESTION =  By.xpath(".//*[contains(@placeholder,'Nationality')]/parent::div/parent::div//li");
 	private By LOC_WL_GENDER = By.xpath(".//div[text()='Gender']");
 	private By LOC_WL_GENDER_OPTIONS = By.xpath(".//div[text()='Gender']/ancestor::div//ul/li");
 	private By LOC_BT_CONTINUE_TO_PAYMENT = By.xpath(".//button[text()='Continue to payment']");
+	private By LOC_IN_DATE_OF_BIRTH = By.cssSelector("[placeholder='DD / MM / YYYY']");
 
 	public ReviewItinerary(SeleniumSEPTest test) {
 
@@ -71,6 +72,7 @@ public class ReviewItinerary {
 	}
 	
 	public void clickContinueButtonContact() {
+		
 		ClickUtils.clickButtonOrFail(test, LOC_BT_CONTINUE_BUTTON_CONTACT_DETAILS, "Unable to click on Continue Button in the contact details section");
 	}
 
@@ -94,6 +96,10 @@ public class ReviewItinerary {
 		FillUtils.fillInputOrFail(test, LOC_IN_NATIONALITY, nationality, "Unable to fill the lastname");
 		WaitUtils.waitForElementVisible(test, LOC_IN_NATIONALITY_SUGGESTION, 2, "The Nationality suggestion is not displayed");
 		ClickUtils.clickButtonOrFail(test, LOC_IN_NATIONALITY_SUGGESTION, "Unable to click on the naationality in the suggestion box");
+		
+		boolean DOBPresent = WaitUtils.waitForElementPresent(test, LOC_IN_DATE_OF_BIRTH, 1, "DOB is not present");
+		if(DOBPresent)
+			FillUtils.fillInputOrFail(test, LOC_IN_DATE_OF_BIRTH, "18081989", "Unable to fill the Date of birth");
 	}
 
 	public void clickContinueToPaymentButton() {
