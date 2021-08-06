@@ -15,7 +15,7 @@ import com.cleartrip.utils.DateUtils;
 
 public class Regression_001_BookRoundTrip extends SeleniumSEPTest{
 
-	@Test(testName = "NRE_001_BookRoundTrip")
+	@Test
 	public void NRE_001_BookRoundTrip_test() throws InterruptedException{
 
 		TopPanel homePage = new TopPanel(this);
