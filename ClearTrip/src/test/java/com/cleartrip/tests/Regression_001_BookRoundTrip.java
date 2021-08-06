@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import com.cleartrip.common.SeleniumSEPTest;
 import com.cleartrip.pages.FlightBooking;
 import com.cleartrip.pages.FlightBooking.tripType;
+import com.cleartrip.pages.ReviewItinerary;
 import com.cleartrip.pages.TopPanel;
 import com.cleartrip.utils.DateUtils;
 
@@ -38,6 +39,15 @@ public class Regression_001_BookRoundTrip extends SeleniumSEPTest{
 				driver.switchTo().window(window);
 			}
 		}
+		
+		ReviewItinerary reviewItinerary = new ReviewItinerary(this);
+		reviewItinerary.selectFares("Standard fare");
+		reviewItinerary.clickContinueButton();
+		reviewItinerary.clickStepThisStepButton();
+		reviewItinerary.enterMobileNumber("8197696308");
+		reviewItinerary.clickContinueButton();
+		reviewItinerary.fillTravellerDetails("Sanjay", "Ceekala", "Male");
+		reviewItinerary.clickContinueToPaymentButton();
 
 	}
 
