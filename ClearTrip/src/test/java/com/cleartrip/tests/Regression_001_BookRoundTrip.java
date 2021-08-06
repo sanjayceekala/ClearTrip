@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import com.cleartrip.common.SeleniumSEPTest;
 import com.cleartrip.pages.FlightBooking;
 import com.cleartrip.pages.FlightBooking.tripType;
+import com.cleartrip.pages.Payment;
 import com.cleartrip.pages.ReviewItinerary;
 import com.cleartrip.pages.TopPanel;
 import com.cleartrip.utils.DateUtils;
@@ -49,6 +50,9 @@ public class Regression_001_BookRoundTrip extends SeleniumSEPTest{
 		reviewItinerary.fillTravellerDetails("Sanjay", "Ceekala", "Male");
 		reviewItinerary.clickContinueToPaymentButton();
 
+		new Payment(this);
+
+		driver.switchTo().window(parentWindow);
 	}
 
 }

@@ -24,8 +24,8 @@ public class FlightBooking {
 	
 	private final By LOC_WL_FLIGHT_SEARCH_PAGE = By.cssSelector("[class*='homeba']");
 	private final MessageFormat LOC_RB_TRIP_TYPE = new MessageFormat(".//p[text()=''{0}'']/ancestor::label//span");
-	private final By LOC_IN_FROM_FLIGHT_SEARCH = By.xpath(".//*h4[text()='From']/parent::div//input");
-	private final By LOC_IN_TO_FLIGHT_SEARCH = By.xpath(".//*h4[text()='To']/parent::div//input");
+	private final By LOC_IN_FROM_FLIGHT_SEARCH = By.xpath(".//h4[text()='From']/parent::div//input");
+	private final By LOC_IN_TO_FLIGHT_SEARCH = By.xpath(".//h4[text()='To']/parent::div//input");
 	private final By LOC_CL_CALENDARS = By.cssSelector("[class*=homeCalender] button");
 	private final By LOC_WL_MONTH_CALENDER = By.cssSelector("[class=DayPicker-Month]");
 	private final By LOC_WL_MONTH_NAME = By.cssSelector("[class=DayPicker-Caption] div");
