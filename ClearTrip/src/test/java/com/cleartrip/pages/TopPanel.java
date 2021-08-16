@@ -1,5 +1,7 @@
 package com.cleartrip.pages;
 
+import java.util.Base64;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -7,6 +9,7 @@ import com.cleartrip.common.SeleniumSEPTest;
 import com.cleartrip.reporters.ReportManager;
 import com.cleartrip.utils.ClickUtils;
 import com.cleartrip.utils.FillUtils;
+import com.cleartrip.utils.PasswordUtils;
 import com.cleartrip.utils.WaitUtils;
 
 public class TopPanel {
@@ -39,8 +42,7 @@ public class TopPanel {
 	public void actionSignIn() {
 		clickYourTrips();
 		clickSignInYourTrips();
-//		enterCredentials("cleartripsixtproject@gmail.com", "Sanjay@89");
-		enterCredentials("sanjayceekala@gmail.com", "Sanjay@89");
+		enterCredentials("Y2xlYXJ0cmlwc2l4dHByb2plY3RAZ21haWwuY29t", "U2FuamF5QDg5");
 		clickSignInCredentials();
 	}
 
@@ -55,8 +57,9 @@ public class TopPanel {
 	}
 
 	public void enterCredentials(String emailAddress, String password) {
-		FillUtils.fillInputOrFail(test, LOC_IN_EMAIL_ADDRESS, emailAddress, "Unable to enter the email address");
-		FillUtils.fillInputOrFail(test, LOC_IN_EMAIL_PASSWORD, password, "Unable to enter the password");
+		
+		FillUtils.fillInputOrFail(test, LOC_IN_EMAIL_ADDRESS, PasswordUtils.decodeString(emailAddress), "Unable to enter the email address");
+		FillUtils.fillInputOrFail(test, LOC_IN_EMAIL_PASSWORD, PasswordUtils.decodeString(password), "Unable to enter the password");
 	}
 
 	public void clickSignInCredentials() {
