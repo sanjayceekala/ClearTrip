@@ -1,7 +1,5 @@
 package com.cleartrip.pages;
 
-import java.util.Base64;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
