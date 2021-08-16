@@ -1,6 +1,7 @@
 package com.cleartrip.utils;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 import com.cleartrip.common.SeleniumSEPTest;
@@ -33,6 +34,7 @@ public class ClickUtils {
 		ReportManager reportManager = test.getReportManager();
 		
 		try {
+			((JavascriptExecutor) test.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
 			element.click();
 			reportManager.reportPassed("WebElement Click", "Clicked on the webelement successfully");
 		}

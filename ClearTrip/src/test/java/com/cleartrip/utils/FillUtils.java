@@ -1,6 +1,7 @@
 package com.cleartrip.utils;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
@@ -36,6 +37,7 @@ public class FillUtils {
 		ReportManager reportManager = test.getReportManager();
 		
 		if(element != null) {
+			((JavascriptExecutor) test.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
 			element.clear();
 			element.sendKeys(text);
 			reportManager.reportPassed("Fill text box", "Successfully filled the text in the text box");
@@ -58,6 +60,7 @@ public class FillUtils {
 		ReportManager reportManager = test.getReportManager();
 		
 		if(element != null) {
+			((JavascriptExecutor) test.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
 			Select select = new Select(element);
 			select.selectByVisibleText(text);
 			reportManager.reportPassed("Select Dropdown Text", "Successfully selected the text in the dropdown");
@@ -80,6 +83,7 @@ public class FillUtils {
 		ReportManager reportManager = test.getReportManager();
 		
 		if(element != null) {
+			((JavascriptExecutor) test.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
 			Select select = new Select(element);
 			select.selectByIndex(index);
 			reportManager.reportPassed("Select Dropdown Index", "Successfully selected the Index in the dropdown");

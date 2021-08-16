@@ -84,13 +84,15 @@ public class FlightBooking {
 
 	public void fillFromCity(String fromCity) {
 		FillUtils.fillInputOrFail(test, LOC_IN_FROM_FLIGHT_SEARCH, fromCity, "Unable to fill the from city");
-		WaitUtils.waitForElementVisible(test, LOC_WL_FROM_SUGGESTIONS, 2, "From Suggestions not displayed");
+		System.out.println(WaitUtils.waitForElementVisible(test, LOC_WL_FROM_SUGGESTIONS, 3, "From Suggestions not displayed"));
+		WaitUtils.waitForElementVisible(test, LOC_WL_FROM_SUGGESTIONS, 3, "From Suggestions not displayed");
 		ClickUtils.clickButtonOrFail(test, LOC_WL_FROM_SUGGESTIONS, "Unable to click on the from city suggestions");
 	}
 
 	public void fillToCity(String toCity) {
 		FillUtils.fillInputOrFail(test, LOC_IN_TO_FLIGHT_SEARCH, toCity, "Unable to fill the to city");
-		WaitUtils.waitForElementVisible(test, LOC_WL_TO_SUGGESTIONS, 2, "To Suggestions not displayed");
+		System.out.println(WaitUtils.waitForElementVisible(test, LOC_WL_TO_SUGGESTIONS, 3, "To Suggestions not displayed"));
+		WaitUtils.waitForElementVisible(test, LOC_WL_TO_SUGGESTIONS, 3, "To Suggestions not displayed");
 		ClickUtils.clickButtonOrFail(test, LOC_WL_TO_SUGGESTIONS, "Unable to click on the to city suggestions");
 	}
 

@@ -39,7 +39,8 @@ public class TopPanel {
 	public void actionSignIn() {
 		clickYourTrips();
 		clickSignInYourTrips();
-		enterCredentials("cleartripsixtproject@gmail.com", "Sanjay@89");
+//		enterCredentials("cleartripsixtproject@gmail.com", "Sanjay@89");
+		enterCredentials("sanjayceekala@gmail.com", "Sanjay@89");
 		clickSignInCredentials();
 	}
 

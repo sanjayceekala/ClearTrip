@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\sceekala\AppData\Local\Temp\testng-eclipse--320316910\testng-customsuite.xml</span>
+                    <span>C:\Users\sceekala\AppData\Local\Temp\testng-eclipse-1299981060\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,21 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content failed suite-Default_suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="com.cleartrip.tests.Regression_001_BookRoundTrip" class="method navigator-link" hash-for-method="NRE_001_BookRoundTrip_test">NRE_001_BookRoundTrip_test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,9 +119,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.cleartrip.tests.Regression_001_BookRoundTrip</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -130,14 +130,49 @@
                   <a name="NRE_001_BookRoundTrip_test">
                   </a> <!-- NRE_001_BookRoundTrip_test -->
                   <span class="method-name">NRE_001_BookRoundTrip_test</span>
+                  <div class="stack-trace">java.lang.AssertionError: Review Itinerary page is not displayed
+	at org.testng.Assert.fail(Assert.java:99)
+	at com.cleartrip.reporters.ReportManager.fail(ReportManager.java:90)
+	at com.cleartrip.pages.ReviewItinerary.&lt;init&gt;(ReviewItinerary.java:50)
+	at com.cleartrip.tests.Regression_001_BookRoundTrip.NRE_001_BookRoundTrip_test(Regression_001_BookRoundTrip.java:44)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
+          </div> <!-- suite-Default_suite-class-failed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\sceekala\AppData\Local\Temp\testng-eclipse--320316910\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\sceekala\AppData\Local\Temp\testng-eclipse-1299981060\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -190,12 +225,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'NRE_001_BookRoundTrip_test')
 data.setCell(0, 2, 'com.cleartrip.tests.Regression_001_BookRoundTrip')
-data.setCell(0, 3, 342494);
+data.setCell(0, 3, 52952);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <span class="suite-total-time">Total running time: 52 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -221,13 +256,16 @@ return data;
                 <span class="reporter-method-output">Element is present in the webpage</span>
                 <span class="reporter-method-output">Element is visible in the webpage</span>
                 <span class="reporter-method-output">Flight Booking page is displayed</span>
-                <span class="reporter-method-output">Clicked on the webelement successfully</span>
-                <span class="reporter-method-output">Successfully filled the text in the text box</span>
                 <span class="reporter-method-output">Element is visible in the webpage</span>
                 <span class="reporter-method-output">Clicked on the webelement successfully</span>
                 <span class="reporter-method-output">Successfully filled the text in the text box</span>
                 <span class="reporter-method-output">Element is visible in the webpage</span>
-                <span class="reporter-method-output">Clicked on the webelement successfully</span>
+                <span class="reporter-method-output">Element is visible in the webpage</span>
+                <span class="reporter-method-output">Unable to click on the from city suggestions</span>
+                <span class="reporter-method-output">Successfully filled the text in the text box</span>
+                <span class="reporter-method-output">Element is visible in the webpage</span>
+                <span class="reporter-method-output">Element is visible in the webpage</span>
+                <span class="reporter-method-output">Unable to click on the to city suggestions</span>
                 <span class="reporter-method-output">Clicked on the webelement successfully</span>
                 <span class="reporter-method-output">Element is visible in the webpage</span>
                 <span class="reporter-method-output">Clicked on the webelement successfully</span>
@@ -235,32 +273,11 @@ return data;
                 <span class="reporter-method-output">Successfully selected the text in the dropdown</span>
                 <span class="reporter-method-output">Element is visible in the webpage</span>
                 <span class="reporter-method-output">Clicked on the webelement successfully</span>
-                <span class="reporter-method-output">Element is present in the webpage</span>
-                <span class="reporter-method-output">Clicked on the webelement successfully</span>
-                <span class="reporter-method-output">Element is present in the webpage</span>
-                <span class="reporter-method-output">Review Itinerary page is displayed</span>
-                <span class="reporter-method-output">Clicked on the webelement successfully</span>
-                <span class="reporter-method-output">Clicked on the webelement successfully</span>
-                <span class="reporter-method-output">Element is visible in the webpage</span>
-                <span class="reporter-method-output">Clicked on the webelement successfully</span>
-                <span class="reporter-method-output">Element is visible in the webpage</span>
-                <span class="reporter-method-output">Successfully filled the text in the text box</span>
-                <span class="reporter-method-output">Element is present in the webpage</span>
-                <span class="reporter-method-output">Element is visible in the webpage</span>
-                <span class="reporter-method-output">Clicked on the webelement successfully</span>
-                <span class="reporter-method-output">Element is visible in the webpage</span>
-                <span class="reporter-method-output">Successfully filled the text in the text box</span>
-                <span class="reporter-method-output">Successfully filled the text in the text box</span>
-                <span class="reporter-method-output">Clicked on the webelement successfully</span>
-                <span class="reporter-method-output">Clicked on the webelement successfully</span>
-                <span class="reporter-method-output">Successfully filled the text in the text box</span>
-                <span class="reporter-method-output">Element is visible in the webpage</span>
-                <span class="reporter-method-output">Clicked on the webelement successfully</span>
-                <span class="reporter-method-output">Element is present in the webpage</span>
-                <span class="reporter-method-output">Successfully filled the text in the text box</span>
-                <span class="reporter-method-output">Clicked on the webelement successfully</span>
-                <span class="reporter-method-output">Element is present in the webpage</span>
-                <span class="reporter-method-output">Payment page is displayed</span>
+                <span class="reporter-method-output">Time out : Element not present</span>
+                <span class="reporter-method-output">The Webelement is not returned : By.xpath: .//button[text()='Book']</span>
+                <span class="reporter-method-output">Unable to click on book button</span>
+                <span class="reporter-method-output">Time out : Element not present</span>
+                <span class="reporter-method-output">Review Itinerary page is not displayed</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -284,12 +301,16 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">NRE_001_BookRoundTrip_test</span>
-                <span class="method-start">3245 ms</span>
+                <span class="method-start">3823 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">tearDown</span>
-                <span class="method-start">350595 ms</span>
+                <span class="method-start">56780 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

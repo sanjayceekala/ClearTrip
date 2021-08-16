@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Aug 06 23:09:54 IST 2021</td>
+<td>Started on:</td><td>Sat Aug 07 00:46:45 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>358 seconds (358744 ms)</td>
+<tr><td>Total time:</td><td>58 seconds (58307 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,76 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.cleartrip.tests.Regression_001_BookRoundTrip.tearDown()'><b>tearDown</b><br>Test class: com.cleartrip.tests.Regression_001_BookRoundTrip</td>
+<td><div><pre>java.lang.AssertionError: Test Failed : One or more steps failed
+	at org.testng.Assert.fail(Assert.java:99)
+	at com.cleartrip.common.SeleniumSEPTest.tearDown(SeleniumSEPTest.java:101)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
+	at org.testng.TestRunner.afterRun(TestRunner.java:877)
+	at org.testng.TestRunner.run(TestRunner.java:599)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1768580358", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1768580358'><pre>java.lang.AssertionError: Test Failed : One or more steps failed
+	at org.testng.Assert.fail(Assert.java:99)
+	at com.cleartrip.common.SeleniumSEPTest.tearDown(SeleniumSEPTest.java:101)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
+	at org.testng.TestRunner.afterRun(TestRunner.java:877)
+	at org.testng.TestRunner.run(TestRunner.java:599)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>com.cleartrip.tests.Regression_001_BookRoundTrip@3d6300e8</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
@@ -76,10 +144,10 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.cleartrip.tests.Regression_001_BookRoundTrip.NRE_001_BookRoundTrip_test()'><b>NRE_001_BookRoundTrip_test</b><br>Test class: com.cleartrip.tests.Regression_001_BookRoundTrip<br/>
-<a href="#Output-842422776" onClick='toggleBox("Output-842422776", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-2008229299" onClick='toggleBox("Output-2008229299", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-842422776" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-842422776">
+<a href="#Output-2008229299" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2008229299">
 Element is present in the webpage<br/>
 Top Panel is displayed<br/>
 Clicked on the webelement successfully<br/>
@@ -92,13 +160,16 @@ Clicked on the webelement successfully<br/>
 Element is present in the webpage<br/>
 Element is visible in the webpage<br/>
 Flight Booking page is displayed<br/>
-Clicked on the webelement successfully<br/>
-Successfully filled the text in the text box<br/>
 Element is visible in the webpage<br/>
 Clicked on the webelement successfully<br/>
 Successfully filled the text in the text box<br/>
 Element is visible in the webpage<br/>
-Clicked on the webelement successfully<br/>
+Element is visible in the webpage<br/>
+Unable to click on the from city suggestions<br/>
+Successfully filled the text in the text box<br/>
+Element is visible in the webpage<br/>
+Element is visible in the webpage<br/>
+Unable to click on the to city suggestions<br/>
 Clicked on the webelement successfully<br/>
 Element is visible in the webpage<br/>
 Clicked on the webelement successfully<br/>
@@ -106,37 +177,83 @@ Clicked on the webelement successfully<br/>
 Successfully selected the text in the dropdown<br/>
 Element is visible in the webpage<br/>
 Clicked on the webelement successfully<br/>
-Element is present in the webpage<br/>
-Clicked on the webelement successfully<br/>
-Element is present in the webpage<br/>
-Review Itinerary page is displayed<br/>
-Clicked on the webelement successfully<br/>
-Clicked on the webelement successfully<br/>
-Element is visible in the webpage<br/>
-Clicked on the webelement successfully<br/>
-Element is visible in the webpage<br/>
-Successfully filled the text in the text box<br/>
-Element is present in the webpage<br/>
-Element is visible in the webpage<br/>
-Clicked on the webelement successfully<br/>
-Element is visible in the webpage<br/>
-Successfully filled the text in the text box<br/>
-Successfully filled the text in the text box<br/>
-Clicked on the webelement successfully<br/>
-Clicked on the webelement successfully<br/>
-Successfully filled the text in the text box<br/>
-Element is visible in the webpage<br/>
-Clicked on the webelement successfully<br/>
-Element is present in the webpage<br/>
-Successfully filled the text in the text box<br/>
-Clicked on the webelement successfully<br/>
-Element is present in the webpage<br/>
-Payment page is displayed<br/>
+Time out : Element not present<br/>
+The Webelement is not returned : By.xpath: .//button[text()='Book']<br/>
+Unable to click on book button<br/>
+Time out : Element not present<br/>
+Review Itinerary page is not displayed<br/>
 </div>
 </td>
-<td></td>
-<td>342</td>
-<td>com.cleartrip.tests.Regression_001_BookRoundTrip@3fcdcf</td></tr>
+<td><div><pre>java.lang.AssertionError: Review Itinerary page is not displayed
+	at org.testng.Assert.fail(Assert.java:99)
+	at com.cleartrip.reporters.ReportManager.fail(ReportManager.java:90)
+	at com.cleartrip.pages.ReviewItinerary.&lt;init&gt;(ReviewItinerary.java:50)
+	at com.cleartrip.tests.Regression_001_BookRoundTrip.NRE_001_BookRoundTrip_test(Regression_001_BookRoundTrip.java:44)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2008229299", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2008229299'><pre>java.lang.AssertionError: Review Itinerary page is not displayed
+	at org.testng.Assert.fail(Assert.java:99)
+	at com.cleartrip.reporters.ReportManager.fail(ReportManager.java:90)
+	at com.cleartrip.pages.ReviewItinerary.&lt;init&gt;(ReviewItinerary.java:50)
+	at com.cleartrip.tests.Regression_001_BookRoundTrip.NRE_001_BookRoundTrip_test(Regression_001_BookRoundTrip.java:44)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>52</td>
+<td>com.cleartrip.tests.Regression_001_BookRoundTrip@3d6300e8</td></tr>
 </table><p>
 </body>
 </html>
