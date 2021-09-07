@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\sceekala\AppData\Local\Temp\testng-eclipse-1299981060\testng-customsuite.xml</span>
+                    <span>C:\Users\sceekala\AppData\Local\Temp\testng-eclipse--58300278\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -130,11 +130,33 @@
                   <a name="NRE_001_BookRoundTrip_test">
                   </a> <!-- NRE_001_BookRoundTrip_test -->
                   <span class="method-name">NRE_001_BookRoundTrip_test</span>
-                  <div class="stack-trace">java.lang.AssertionError: Review Itinerary page is not displayed
-	at org.testng.Assert.fail(Assert.java:99)
-	at com.cleartrip.reporters.ReportManager.fail(ReportManager.java:90)
-	at com.cleartrip.pages.ReviewItinerary.&lt;init&gt;(ReviewItinerary.java:50)
-	at com.cleartrip.tests.Regression_001_BookRoundTrip.NRE_001_BookRoundTrip_test(Regression_001_BookRoundTrip.java:44)
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Failed to decode response from marionette
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;SCEEKALPF28RTJ2&apos;, ip: &apos;192.168.29.108&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210721174149, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 21168, moz:profile: C:\Users\sceekala\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 305ff255-8900-493e-a013-39368f9c05d6
+*** Element info: {Using=xpath, value=.//button[text()=&apos;Book&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at com.cleartrip.utils.WaitUtils.waitForElementPresent(WaitUtils.java:32)
+	at com.cleartrip.pages.FlightBooking.clickSearchFlights(FlightBooking.java:148)
+	at com.cleartrip.tests.Regression_001_BookRoundTrip.NRE_001_BookRoundTrip_test(Regression_001_BookRoundTrip.java:32)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -172,7 +194,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\sceekala\AppData\Local\Temp\testng-eclipse-1299981060\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\sceekala\AppData\Local\Temp\testng-eclipse--58300278\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -225,12 +247,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'NRE_001_BookRoundTrip_test')
 data.setCell(0, 2, 'com.cleartrip.tests.Regression_001_BookRoundTrip')
-data.setCell(0, 3, 52952);
+data.setCell(0, 3, 13662);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 52 seconds</span>
+              <span class="suite-total-time">Total running time: 13 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -261,11 +283,11 @@ return data;
                 <span class="reporter-method-output">Successfully filled the text in the text box</span>
                 <span class="reporter-method-output">Element is visible in the webpage</span>
                 <span class="reporter-method-output">Element is visible in the webpage</span>
-                <span class="reporter-method-output">Unable to click on the from city suggestions</span>
+                <span class="reporter-method-output">Clicked on the webelement successfully</span>
                 <span class="reporter-method-output">Successfully filled the text in the text box</span>
                 <span class="reporter-method-output">Element is visible in the webpage</span>
                 <span class="reporter-method-output">Element is visible in the webpage</span>
-                <span class="reporter-method-output">Unable to click on the to city suggestions</span>
+                <span class="reporter-method-output">Clicked on the webelement successfully</span>
                 <span class="reporter-method-output">Clicked on the webelement successfully</span>
                 <span class="reporter-method-output">Element is visible in the webpage</span>
                 <span class="reporter-method-output">Clicked on the webelement successfully</span>
@@ -273,11 +295,6 @@ return data;
                 <span class="reporter-method-output">Successfully selected the text in the dropdown</span>
                 <span class="reporter-method-output">Element is visible in the webpage</span>
                 <span class="reporter-method-output">Clicked on the webelement successfully</span>
-                <span class="reporter-method-output">Time out : Element not present</span>
-                <span class="reporter-method-output">The Webelement is not returned : By.xpath: .//button[text()='Book']</span>
-                <span class="reporter-method-output">Unable to click on book button</span>
-                <span class="reporter-method-output">Time out : Element not present</span>
-                <span class="reporter-method-output">Review Itinerary page is not displayed</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -304,13 +321,13 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">NRE_001_BookRoundTrip_test</span>
-                <span class="method-start">3823 ms</span>
+                <span class="method-start">3155 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">tearDown</span>
-                <span class="method-start">56780 ms</span>
+                <span class="method-start">16823 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

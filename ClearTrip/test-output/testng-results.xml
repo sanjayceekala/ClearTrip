@@ -53,7 +53,7 @@
       <![CDATA[Element is visible in the webpage]]>
     </line>
     <line>
-      <![CDATA[Unable to click on the from city suggestions]]>
+      <![CDATA[Clicked on the webelement successfully]]>
     </line>
     <line>
       <![CDATA[Successfully filled the text in the text box]]>
@@ -65,7 +65,7 @@
       <![CDATA[Element is visible in the webpage]]>
     </line>
     <line>
-      <![CDATA[Unable to click on the to city suggestions]]>
+      <![CDATA[Clicked on the webelement successfully]]>
     </line>
     <line>
       <![CDATA[Clicked on the webelement successfully]]>
@@ -88,42 +88,55 @@
     <line>
       <![CDATA[Clicked on the webelement successfully]]>
     </line>
-    <line>
-      <![CDATA[Time out : Element not present]]>
-    </line>
-    <line>
-      <![CDATA[The Webelement is not returned : By.xpath: .//button[text()='Book']]]>
-    </line>
-    <line>
-      <![CDATA[Unable to click on book button]]>
-    </line>
-    <line>
-      <![CDATA[Time out : Element not present]]>
-    </line>
-    <line>
-      <![CDATA[Review Itinerary page is not displayed]]>
-    </line>
   </reporter-output>
-  <suite started-at="2021-08-07T00:46:45 IST" name="Default suite" finished-at="2021-08-07T00:47:43 IST" duration-ms="58307">
+  <suite started-at="2021-09-01T11:18:09 IST" name="Default suite" finished-at="2021-09-01T11:18:26 IST" duration-ms="16911">
     <groups>
     </groups>
-    <test started-at="2021-08-07T00:46:45 IST" name="Default test" finished-at="2021-08-07T00:47:43 IST" duration-ms="58307">
+    <test started-at="2021-09-01T11:18:09 IST" name="Default test" finished-at="2021-09-01T11:18:26 IST" duration-ms="16911">
       <class name="com.cleartrip.tests.Regression_001_BookRoundTrip">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.cleartrip.tests.Regression_001_BookRoundTrip@3d6300e8]" started-at="2021-08-07T00:46:45 IST" name="setUp" finished-at="2021-08-07T00:46:49 IST" duration-ms="3797" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.cleartrip.tests.Regression_001_BookRoundTrip@3d6300e8]" started-at="2021-09-01T11:18:09 IST" name="setUp" finished-at="2021-09-01T11:18:12 IST" duration-ms="3105" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="NRE_001_BookRoundTrip_test()[pri:0, instance:com.cleartrip.tests.Regression_001_BookRoundTrip@3d6300e8]" started-at="2021-08-07T00:46:49 IST" name="NRE_001_BookRoundTrip_test" finished-at="2021-08-07T00:47:42 IST" duration-ms="52952" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="NRE_001_BookRoundTrip_test()[pri:0, instance:com.cleartrip.tests.Regression_001_BookRoundTrip@3d6300e8]" started-at="2021-09-01T11:18:12 IST" name="NRE_001_BookRoundTrip_test" finished-at="2021-09-01T11:18:26 IST" duration-ms="13662" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[Review Itinerary page is not displayed]]>
+              <![CDATA[Failed to decode response from marionette
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SCEEKALPF28RTJ2', ip: '192.168.29.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210721174149, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 21168, moz:profile: C:\Users\sceekala\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 305ff255-8900-493e-a013-39368f9c05d6
+*** Element info: {Using=xpath, value=.//button[text()='Book']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Review Itinerary page is not displayed
-at org.testng.Assert.fail(Assert.java:99)
-at com.cleartrip.reporters.ReportManager.fail(ReportManager.java:90)
-at com.cleartrip.pages.ReviewItinerary.<init>(ReviewItinerary.java:50)
-at com.cleartrip.tests.Regression_001_BookRoundTrip.NRE_001_BookRoundTrip_test(Regression_001_BookRoundTrip.java:44)
+              <![CDATA[org.openqa.selenium.WebDriverException: Failed to decode response from marionette
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SCEEKALPF28RTJ2', ip: '192.168.29.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210721174149, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 21168, moz:profile: C:\Users\sceekala\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 305ff255-8900-493e-a013-39368f9c05d6
+*** Element info: {Using=xpath, value=.//button[text()='Book']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+at com.cleartrip.utils.WaitUtils.waitForElementPresent(WaitUtils.java:32)
+at com.cleartrip.pages.FlightBooking.clickSearchFlights(FlightBooking.java:148)
+at com.cleartrip.tests.Regression_001_BookRoundTrip.NRE_001_BookRoundTrip_test(Regression_001_BookRoundTrip.java:32)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -154,7 +167,7 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
             <line>
               <![CDATA[Element is present in the webpage]]>
@@ -208,7 +221,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               <![CDATA[Element is visible in the webpage]]>
             </line>
             <line>
-              <![CDATA[Unable to click on the from city suggestions]]>
+              <![CDATA[Clicked on the webelement successfully]]>
             </line>
             <line>
               <![CDATA[Successfully filled the text in the text box]]>
@@ -220,7 +233,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               <![CDATA[Element is visible in the webpage]]>
             </line>
             <line>
-              <![CDATA[Unable to click on the to city suggestions]]>
+              <![CDATA[Clicked on the webelement successfully]]>
             </line>
             <line>
               <![CDATA[Clicked on the webelement successfully]]>
@@ -243,32 +256,38 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <line>
               <![CDATA[Clicked on the webelement successfully]]>
             </line>
-            <line>
-              <![CDATA[Time out : Element not present]]>
-            </line>
-            <line>
-              <![CDATA[The Webelement is not returned : By.xpath: .//button[text()='Book']]]>
-            </line>
-            <line>
-              <![CDATA[Unable to click on book button]]>
-            </line>
-            <line>
-              <![CDATA[Time out : Element not present]]>
-            </line>
-            <line>
-              <![CDATA[Review Itinerary page is not displayed]]>
-            </line>
           </reporter-output>
         </test-method> <!-- NRE_001_BookRoundTrip_test -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.cleartrip.tests.Regression_001_BookRoundTrip@3d6300e8]" started-at="2021-08-07T00:47:42 IST" name="tearDown" finished-at="2021-08-07T00:47:43 IST" duration-ms="1518" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.cleartrip.tests.Regression_001_BookRoundTrip@3d6300e8]" started-at="2021-09-01T11:18:26 IST" name="tearDown" finished-at="2021-09-01T11:18:26 IST" duration-ms="72" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
             <message>
-              <![CDATA[Test Failed : One or more steps failed]]>
+              <![CDATA[Tried to run command without establishing a connection
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SCEEKALPF28RTJ2', ip: '192.168.29.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210721174149, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 21168, moz:profile: C:\Users\sceekala\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 305ff255-8900-493e-a013-39368f9c05d6]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Test Failed : One or more steps failed
-at org.testng.Assert.fail(Assert.java:99)
-at com.cleartrip.common.SeleniumSEPTest.tearDown(SeleniumSEPTest.java:101)
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SCEEKALPF28RTJ2', ip: '192.168.29.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210721174149, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 21168, moz:profile: C:\Users\sceekala\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 305ff255-8900-493e-a013-39368f9c05d6
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:452)
+at com.cleartrip.common.SeleniumSEPTest.tearDown(SeleniumSEPTest.java:93)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -295,7 +314,7 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

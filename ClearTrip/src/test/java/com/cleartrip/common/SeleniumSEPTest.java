@@ -29,7 +29,6 @@ public class SeleniumSEPTest {
 	protected SoftAssert sAssert;
 
 	public SeleniumSEPTest() {
-		super();
 
 		testClassName = this.getClass().getSimpleName();
 		extentReport = new ExtentReports("./ExtentReports/" + testClassName + ".html", true);
