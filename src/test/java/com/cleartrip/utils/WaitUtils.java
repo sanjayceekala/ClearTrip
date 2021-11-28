@@ -1,5 +1,7 @@
 package com.cleartrip.utils;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -26,7 +28,7 @@ public class WaitUtils {
 		WebDriver driver = test.getDriver();
 		ReportManager reportManager = test.getReportManager();
 
-		WebDriverWait wait = new WebDriverWait(driver, timeOut, 10);
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
 
 		try {
 			WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
@@ -61,7 +63,7 @@ public class WaitUtils {
 		ReportManager reportManager = test.getReportManager();
 
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, timeOut);
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
 			WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 			if(element != null) {
 				reportManager.reportPassed("Element", "Element is visible in the webpage");
